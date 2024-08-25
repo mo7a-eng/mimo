@@ -1,0 +1,227 @@
+<MY>
+    id:mm
+    pos_hint:{"center_x": .5, "center_y": .5}
+    adaptive_size: True
+    size:"260dp","370dp"
+    line_color:'Custom'
+    radius: [12]
+    theme_bg_color:'Custom'
+    md_bg_color:0.1068627450980392, 0.1068627450980392, 0.1068627450980392, .88
+    line_color: 0.9, 0.788235294117647, 0.7529411764705882, .1
+
+    MDTextField:
+        id:data
+        mode: "outlined"
+        size_hint_x: None
+        width: "235dp"
+        pos_hint: {"center_x": .5, "center_y": .8}
+        radius:[dp(16), dp(4), dp(16), dp(4)]
+        theme_line_color: "Custom"
+        line_color_focus: 0.2, 0.788235294117647, 0.7529411764705882, 1
+
+
+        MDTextFieldHintText:
+            color:0.9, 0.788235294117647, 0.7529411764705882, .1
+            text: "Note"
+
+    MDTextField:
+        id:pont
+        mode: "outlined"
+        size_hint_x: None
+        width: "235dp"
+        pos_hint: {"center_x": .5, "center_y": .5}
+        radius:[dp(16), dp(4), dp(16), dp(4)]
+        theme_line_color: "Custom"
+        line_color_focus: 0.2, 0.788235294117647, 0.7529411764705882, 1
+
+
+        MDTextFieldHintText:
+            color:0.9, 0.788235294117647, 0.7529411764705882, .1
+            text: "ponts"
+
+    MDFabButton:
+        icon: "plus"
+        style: "standard"
+        theme_bg_color: "Custom"
+        md_bg_color:0.2745098039215686,0.6470588235294118,0.5607843137254902,1
+        pos_hint: {"center_x": 0.22, "center_y": .32}
+        on_press: app.GREEN()
+        size: "40dp", "40dp"
+
+    MDFabButton:
+        icon: "minus"
+        size: "40dp", "40dp"
+        style: "standard"
+        theme_bg_color: "Custom"
+        md_bg_color:0.7743055555555556,0.1076388888888889,0.1076388888888889,1
+        pos_hint: {"center_x": .5, "center_y": .32}
+        on_press: app.RED()
+
+
+
+    MDButton:
+        theme_width: "Custom"
+        width:"99dp"
+        radius:"12dp"
+        theme_bg_color: "Custom"
+        pos_hint: {"center_x": .76, "center_y": .12}
+        md_bg_color: 0.2, 0.2, 0.2, 1
+        style: "tonal"
+        on_press: app.save(root)
+        MDButtonText:
+            text:"Save"
+            theme_text_color: "Custom"
+            pos_hint: {"center_x": .5, "center_y": .5}
+            font_style: "Title"
+            text_color: 0.862745, 0.8774, 0.874509, 1
+
+    MDButton:
+        theme_width: "Custom"
+        width:"99dp"
+        radius:"12dp"
+        theme_bg_color: "Custom"
+        pos_hint: {"center_x": .224, "center_y": .12}
+        md_bg_color: 0.2, 0.2, 0.2, 1
+        style: "tonal"
+        on_press:app.cancel(root)
+        MDButtonText:
+            text:"cancel "
+            theme_text_color: "Custom"
+            pos_hint: {"center_x": .5, "center_y": .5}
+            font_style: "Title"
+            text_color: 0.862745, 0.8774, 0.874509, 1
+    
+    
+
+<MDRelativeLayout>
+    id:ik
+    MDLabel:
+        text: root.text
+        pos_hint: {"center_x": .1, "center_y": .65}
+        adaptive_size: True
+        color: 0.862745, 0.8774, 0.874509, 1
+        pos: "1", "1dp"
+        bold: True
+
+
+<MDLabel>
+    text: root.text
+
+
+<MYMIMO>
+    id:nimo
+    pos_hint:{"center_x": .5, "center_y": .5}
+    adaptive_size: True
+    radius: [12]
+    size:"260dp","190dp"
+    line_color:'Custom'
+    theme_bg_color:'Custom'
+    md_bg_color:0.1068627450980392, 0.1068627450980392, 0.1068627450980392, .88
+    line_color: 0.9, 0.788235294117647, 0.7529411764705882, .1
+
+    MDTextField:
+        id:sp
+        mode: "outlined"
+        size_hint_x: None
+        width: "235dp"
+        pos_hint: {"center_x": .5, "center_y": .75}
+        radius:[dp(16), dp(4), dp(16), dp(4)]
+        theme_line_color: "Custom"
+        line_color_focus: 0.2, 0.788235294117647, 0.7529411764705882, 1
+
+
+        MDTextFieldHintText:
+            color:0.9, 0.788235294117647, 0.7529411764705882, .1
+            text: "ponts"
+
+
+
+
+    MDButton:
+        theme_width: "Custom"
+        width:"99dp"
+        radius:"12dp"
+        theme_bg_color: "Custom"
+        pos_hint: {"center_x": .5, "center_y": .15}
+        md_bg_color: 0.2, 0.2, 0.2, 1
+        style: "tonal"
+        on_press: app.spe(root)
+        MDButtonText:
+            text:"ok"
+            theme_text_color: "Custom"
+            pos_hint: {"center_x": .5, "center_y": .5}
+            font_style: "Title"
+            text_color: 0.862745, 0.8774, 0.874509, 1
+
+<MyCard>
+    size_hint: None, None
+    size: "335dp", "64dp"
+    style: "elevated"
+    theme_bg_color: "Custom"
+    md_bg_color: 0.121568, 0.1411764706, 0.1490196078, 1
+    radius:[dp(4), dp(16), dp(16), dp(16)]
+    on_press: app.update_pont(root)
+
+
+    MDIconButton:
+        icon: "trash-can"
+        pos_hint: {"center_x": .1, "center_y": .5}
+        theme_icon_color: "Custom"
+        icon_color: 0.1921568627, 0.7450980392, 0.6038215686, 1
+        on_press: app.on_delet(root)
+
+
+MDScreen:
+    id: screen
+    theme_bg_color: "Custom"
+    md_bg_color: 0.08627450980392157, 0.08627450980392157, 0.08627450980392157, 1
+
+    MDFloatLayout:
+        pos_hint:{"center_x": .5, "center_y": .45}
+        adaptive_size: True
+        size:"350dp","450dp"
+        MDScrollView:
+            do_scroll_x: False
+            pos_hint: {"center_x": .5, "center_y": .5}        
+            MDBoxLayout:
+                id: main_scroll
+                orientation: "vertical"
+                adaptive_height: True
+
+                MDBoxLayout:
+                    adaptive_height: True
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        adaptive_height: True
+                        MDList:
+                            id: box
+                            adaptive_size: True
+                            theme_bg_color: "Custom"
+                            spacing: "4dp"
+                            pos_hint: {"center_x": .5, "center_y": .5}        
+
+
+    MDFloatLayout:
+        radius: [12]
+        pos_hint:{"center_x": .5, "center_y": 0.06}
+        adaptive_size: True
+        size:"350dp","70dp"
+        theme_bg_color:'Custom'
+        md_bg_color:0.1068627450980392, 0.1068627450980392, 0.1068627450980392, 1
+        
+        MDFabButton:
+            icon: "plus"
+            style: "standard"
+            theme_bg_color: "Custom"
+            md_bg_color: 0.07450980392156863, 0.7803921568627451, 0.5098039215686274, 1
+            pos_hint: {"center_x": .8, "center_y": .5}
+            on_press: app.num()
+
+
+        MDFabButton:
+            icon: "pencil"
+            style: "standard"
+            theme_bg_color: "Custom"
+            md_bg_color: 0.07450980392156863, 0.7803921568627451, 0.5098039215686274, 1
+            pos_hint: {"center_x": .2, "center_y": .5}
+            on_press: app.sp()
